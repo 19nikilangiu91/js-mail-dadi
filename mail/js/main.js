@@ -1,34 +1,67 @@
-// Chiedere all'utente di inserire il nominativo per vedere se è nella lista
+// Chiedere all'utente di inserire il nominativo per vedere se è nella lista.
 
-let richiesta = prompt("Inserisci il tuo nome per vedere se sei nella lista");
+// let richiesta = prompt("Inserisci il tuo nome per vedere se sei nella lista");
 
-// Inserire le persone nella lista
+// Inserire le persone nella lista.
 
 let inLista = ["Luca", "Marco", "Paolo"];
+console.log(inLista);
 
-// Inserire le persone non in lista
+// Creo l'input. 
 
-let possoEntrare = false;
+let richiesta = document.getElementById("text");
+
+
+// Creo Bottone.
+
+let bottone = document.getElementById("miobottone");
+
+
+// Creo il contenitore output
+
+let contenitore = document.getElementById("container");
+
 
 // Creo l'array
 
-for (let i = 0; i < inLista.length; i++){
-    
-    // Creo la condizione
-    // Se il nome è in lista la persona sarà vera.
+bottone.addEventListener("click",
 
-    if (richiesta === inLista[i]){
+    function(){
+
+        // Inserire le persone non in lista.
         
-        possoEntrare = true;
-    }
+        let inputUtente = richiesta.value;
+        console.log(inputUtente);
+        let possoEntrare = false;
+
+        // Ciclo
+
+        for (let i = 0; i < inLista.length; i++){
     
-    if (possoEntrare == true){
-        console.log("Complimenti puoi entrare");
-        document.getElementById("title"). innerHTML = "Sei nella lista, puoi entrare!";
-    } else {
-        console.log("Mi dispiace, non puoi entrare");
-        document.getElementById("title"). innerHTML = "Non sei nella lista, puoi entrare!";
+            // Creo la condizione
+            // Se il nome è in lista la persona sarà vera.
+        
+            if (inputUtente === inLista[i]){
+                
+                possoEntrare = true;
+            }
+        }
+
+        if (possoEntrare == true){
+            console.log(possoEntrare, "può entrare");
+            document.getElementById("container"). innerHTML = "Sei nella lista, puoi entrare!";
+        } else {
+            console.log(possoEntrare, " non può entrare" );
+            document.getElementById("container"). innerHTML = "Non sei nella lista, puoi entrare!";
+        }
+        
     }
-}
+
+);
+
+
+
+
+
 
 
