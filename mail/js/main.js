@@ -4,7 +4,7 @@
 
 // Inserire le persone nella lista.
 
-let inLista = ["Luca", "Marco", "Paolo"];
+let inLista = ["Luca@ciaone.it", "Marco@ciaone.it", "Paolo@ciaone.it"];
 console.log(inLista);
 
 // Creo l'input. 
@@ -19,7 +19,7 @@ let bottone = document.getElementById("miobottone");
 
 // Creo il contenitore output
 
-let contenitore = document.getElementById("container");
+let uscita = document.getElementById("uscita");
 
 
 // Creo l'array
@@ -49,10 +49,10 @@ bottone.addEventListener("click",
 
         if (possoEntrare == true){
             console.log(possoEntrare, "può entrare");
-            document.getElementById("container"). innerHTML = "Sei nella lista, puoi entrare!";
+            document.getElementById("uscita"). innerHTML = "Sei nella lista, puoi entrare!";
         } else {
             console.log(possoEntrare, " non può entrare" );
-            document.getElementById("container"). innerHTML = "Non sei nella lista, puoi entrare!";
+            document.getElementById("uscita"). innerHTML = "Non sei nella lista, puoi entrare!";
         }
         
     }
