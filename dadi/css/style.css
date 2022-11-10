@@ -1,9 +1,19 @@
 .container{
     display: flex;
     justify-content: space-around;
+    align-self: center;
     width: 80%;
-    margin: auto;
-    min-height: 100px;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.containerbottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
     background-color: red;
 }
 
@@ -11,9 +21,19 @@ h1{
     text-align: center;
 }
 
+button{
+    height: 30px;
+}
+
 #mieinumeri, #numeripc{
-    margin: 50px;
+    margin: 100px;
     width: 20%;
-    min-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
     background-color: blue;
+}
+
+#parita{
+    margin-top: 180px;
 }
