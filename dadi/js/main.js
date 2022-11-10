@@ -15,12 +15,17 @@ if(mieiNumeri > pcNumeri){
     ilMio.append(mieiNumeri);
     ilPc.append(pcNumeri);
     console.log("Hai Vinto, sei troppo forte!", mieiNumeri);
+    // document.getElementById("").innerHTML="Hai Vinto, sei troppo forte!";
 } else if (mieiNumeri == pcNumeri){
     ilMio.append(mieiNumeri);
     ilPc.append(pcNumeri);
     console.log("La Partita è pari", mieiNumeri, pcNumeri);
+    // document.getElementById("").innerHTML="Pareggio";
+
 } else{
     ilMio.append(mieiNumeri);
     ilPc.append(pcNumeri);
     console.log("Ha Vinto il Computer, riprova e sarai meno sfortunato!", pcNumeri);
+    // document.getElementById("").innerHTML="Ha Vinto il Computer, riprova e sarai meno sfortunato!";
+
 }
